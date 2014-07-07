@@ -1,0 +1,9 @@
+---
+es:
+  devise:
+    failure:
+      already_authenticated: Already Authenticated
+    sessions:
+      user:
+        signed_out: Signed Out
+        signed_in: ¡En linea!

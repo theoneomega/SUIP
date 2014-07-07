@@ -1,0 +1,47 @@
+<%= render "layouts/first_tab" %>
+
+<div class="CSSTableGenerator" >
+  <table >
+    <tr>
+      <td>
+        <b><%= t'.username' %></b> <%= @user.username %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b><%= t'.first_name' %></b> <%= @user.first_name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b><%= t'.last_name' %></b> <%= @user.last_name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b><%= t'.last_name2' %></b> <%= @user.last_name2 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b><%= t'.phone_number' %></b> <%= @user.phone_number %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>
+          <%= t'.roles' %>
+        </b>
+        <% @user.roles.each do |role| %>
+      <li>
+        <%= role.name %>
+      </li> 
+    <% end %>
+    </td>
+
+    </tr>
+  </table>
+ 
+</div> 
+<%= render "layouts/action_links" %>
+<br />

@@ -1,0 +1,44 @@
+<%= render "layouts/first_tab" %>
+
+<div class="CSSTableGenerator" >
+  <table >
+    <tr>
+      <td>
+        <b>Nombre:</b> <%= @organization.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Categoria:</b> <%= @organization.category.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Area de operación:</b> <%= @organization.operational_area %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Lugar de reunión:</b> <%= @organization.meeting_place %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Modus operandi:</b> <%= @organization.modus_operandi %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Miembros conocidos:</b> 
+        <% @organization.person.each do | person|%>
+          <%= link_to person.name, person %>
+        <% end %>
+      </td>
+    </tr>
+
+
+  </table>
+</div>
+<%= render "layouts/action_links" %>
+
+<br />

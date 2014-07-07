@@ -1,0 +1,59 @@
+<%= render "layouts/first_tab" %>
+<%= simple_form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, :class => "text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :last_name2 %>
+    <%= f.text_field :last_name2, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :phone_number %>
+    <%= f.phone_field :phone_number, :class=>"text-input small-input" %>
+  </p>
+
+  <% if controller.action_name == "new" %>
+    <p class="field">
+      <%= f.label :password  %>
+      <%= f.password_field :password, :class=>"text-input small-input" %>
+    </p>
+
+    <p class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, :class=>"text-input small-input" %>
+    </p>
+  <% end %>
+
+  <%= f.association :roles, :as => :check_boxes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'button' %>
+  </div>
+
+<% end %>

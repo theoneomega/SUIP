@@ -1,0 +1,19 @@
+<%= render "layouts/first_tab" %>
+
+<div class="CSSTableGenerator" >
+  <table >
+    <tr>
+      <td>
+        <b><%= t'.name' %></b> <%= @category.name %>
+      </td>
+    </tr>
+    
+      <td>
+        <b><%= t'.description' %></b> <%= @category.description %>
+      </td>
+    </tr>
+  </table>
+  
+</div>
+<%= render "layouts/action_links" %>
+<br />

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/views/layouts/application.html.erb</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/controllers/users_controller.rb</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/models/user.rb</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/config/locales/es.yml</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/views/users/_form.html.erb</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/models/assignment.rb</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/views/layouts/_sidebar.erb</file>
+            <file>file:/home/desarrollo/projects/anti-gangs/app/views/layouts/devise.html.erb</file>
+        </group>
+    </open-files>
+</project-private>

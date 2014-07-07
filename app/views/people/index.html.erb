@@ -1,0 +1,55 @@
+<div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+  <table>
+    <thead>
+      <tr>
+        <th><input class="check-all" type="checkbox" /></th>
+        <th>Nombre</th>
+        <th>Organización</th>
+        <th>Genero</th>
+        <th>Alias</th>
+        <th>Rango</th>
+      </tr>
+
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <div class="bulk-actions align-left">
+          </div>
+          <%= render "layouts/pagination" %>
+          <div class="clear"></div>
+        </td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <%if can? :show, Person %>
+            <td><%=link_to person.id, person, :class => 'button'%></td>
+          <%else%>
+            <td><%= label person.id, person.id, :class => 'button'%></td>
+          <%end%>
+
+
+          <% @model = person %> 
+
+          <td><%= person.name %></td>
+
+          <td><%= person.organization.name %></td>
+
+          <td><%= person.sex %></td>
+
+          <td><%= person.alias %></td>
+
+          <td><%= person.rank %></td>
+
+          <%= render "layouts/index_links" %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <%= render "layouts/action_links" %>
+</div> 
+<%= render "layouts/second_tab" %>

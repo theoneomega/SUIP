@@ -1,0 +1,57 @@
+<div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+  <table>
+    <thead>
+      <tr>
+        <th><input class="check-all" type="checkbox" /></th>
+        <th><%= t'.id' %></th>
+                  <th><%= t'.username' %></th>
+                  <th><%= t'.first_name' %></th>
+                  <th><%= t'.last_name' %></th>
+                  <th><%= t'.last_name2' %></th>
+                  <th><%= t'.phone_number' %></th>
+              </tr>
+
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <div class="bulk-actions align-left">
+            <%= render "layouts/select_action" %>
+          </div>
+          <%= render "layouts/pagination" %>
+          <div class="clear"></div>
+        </td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <%if can? :show, User %>
+        <td><%=link_to user.id, user, :class => 'button'%></td>
+        <%else%>
+        <td><%= label user.id, user.id, :class => 'button'%></td>
+        <%end%>
+        
+                  
+            <% @model = user %> 
+                    
+          <td><%= user.username %></td>
+                            
+          <td><%= user.first_name %></td>
+                            
+          <td><%= user.last_name %></td>
+                            
+          <td><%= user.last_name2 %></td>
+                            
+          <td><%= user.phone_number %></td>
+                <%= render "layouts/index_links" %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <%= render "layouts/action_links" %>
+</div> 
+<%= render "layouts/second_tab" %>

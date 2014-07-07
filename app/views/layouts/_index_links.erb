@@ -1,0 +1,21 @@
+<td>
+  <% if can? :show, eval(controller_name.singularize.titleize)  %>
+    <%=link_to @model, :class=>"nav-header" do%>
+      <img src="/assets/icons/information.png" alt="Mostrar" />
+    <%end%>
+  <% end %>
+</td>
+<td>
+  <% if can? :edit, eval(controller_name.singularize.titleize)  %>
+    <%=link_to eval("edit_#{controller_name.singularize}_path(@model)"), :class=>"nav-header" do%>
+      <img src="/assets/icons/pencil.png" alt="Edit" />
+    <%end%>
+  <% end %>
+</td>
+<td>
+  <% if can? :delete, eval(controller_name.singularize.titleize)  %>
+    <%=link_to @model, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"nav-header" do%>
+      <img src="/assets/icons/cross.png" alt="Delete" />
+    <%end%>
+  <% end  %>
+</td>

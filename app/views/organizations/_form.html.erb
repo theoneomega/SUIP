@@ -1,0 +1,41 @@
+<%= render "layouts/first_tab" %>
+<%= simple_form_for(@organization) do |f| %>
+  <% if @organization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+
+      <ul>
+        <% @organization.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h3 style="text-align: center;"><%= t'general_info' %></h3><br/>
+  <fieldset class="column-left">
+    <p class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, :class=>"text-input medium-input" %>
+    </p>
+    <p class="field">
+      <%#= f.label :category_id %>
+      <%= f.association :category %>
+    </p>
+    <p class="field">
+      <%= f.input :operational_area, :as => :radio_buttons, priority: [ "Pandilla de la calle" ], collection: [ "Pandilla de la calle", "Pandilla de Prisión", "Pandilla de Motociclistas","Otros"] %>
+    </p>
+    <p class="field">
+      <%= f.label :meeting_place %>
+      <%= f.text_field :meeting_place, :class=>"text-input medium-input" %>
+    </p>
+  </fieldset>
+  <fieldset class="clumn-right">
+    <p class="field">
+      <%= f.label :modus_operandi %>
+      <%= f.text_area :modus_operandi, :class=>"text-input big-input" %>
+    </p>
+  </fieldset>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'button' %>
+  </div>
+<% end %>

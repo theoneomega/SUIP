@@ -1,0 +1,56 @@
+<div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->
+
+    <h1 id="sidebar-title"><a href="#">SUIP</a></h1>
+
+    <!-- Logo (221px wide) -->
+    <center><%= link_to image_tag("/assets/logono.png", :style => " width: 200px;", :id => "logo", :alt => ""), "/", :style => "display: block;" %></center>
+    <!-- Sidebar Profile links -->
+    <div id="profile-links">
+      <% if signed_in? %>
+        <%= link_to current_user.fullname, current_user %>, <%= t(:signed_in) %> <br />
+        <br />
+        <%= link_to t(:home), root_path %> | 
+        <%= link_to t(:logout), destroy_user_session_path %>
+      <% else %>
+        <%= link_to t(:sign_in), new_user_session_path %>
+      <% end %>
+    </div>
+    <ul id="main-nav">  <!-- Accordion Menu -->
+      <li>     
+        <%= link_to t(:home), root_path, :class=> "nav-top-item no-submenu" + (controller_name == "welcome" ? " current": "") %>
+      </li>
+      <% if signed_in? %>
+        <% @models = Dir['app/models/*.rb'].map { |f| File.basename(f, '.*').camelize.constantize.name } %>
+        <% @models -= %w{Ability Assignment Permission} %>
+        <% id = 1 %>
+        <% @models.each do |model| %>
+
+          <% if can? :index,  model.constantize %>
+            <li> 
+              <a href="#" class="nav-top-item mainlinks<%= " current" if controller_name == model.pluralize.downcase %>" id="<%= id %>main"> <!-- Add the class "current" to current menu item -->
+                <%= eval("t(:#{model.pluralize.downcase})") %>
+              </a>
+              <ul>
+                <li><%= link_to eval("t(:#{model.pluralize.downcase})"), eval("#{model.downcase.pluralize}_path"), :class => controller_name == model.pluralize.downcase && controller.action_name == "index" ? "current": "" %></li>
+                <% if %w{Category Person Organization}.include?(model) %>
+                  <% new_text = t(:new_record_female, :record => eval("t('activerecord.models.#{model.downcase}')")) %>
+                <% else %>
+                  <% new_text = t(:new_record_male, :record => eval("t('activerecord.models.#{model.downcase}')")) %>
+                <% end %>
+
+                  <% if can? :create, model.constantize  %>
+                    <li><%= link_to new_text, eval("new_#{model.downcase}_path"), :class => controller_name == model.pluralize.downcase && controller.action_name == "new" ? "current": "" %></li>
+                  <% end %>
+              </ul>
+            </li>
+          <% end %>
+        <% end %>
+        <% id = id + 1 %>
+
+        <li>
+
+
+        <% end %>
+    </ul> <!-- End #main-nav -->
+
+  </div></div> <!-- End #sidebar -->

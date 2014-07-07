@@ -1,0 +1,42 @@
+<div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+  <table>
+    <thead>
+      <tr>
+        <th><%= t'.id' %></th>
+        <th><%= t'.description' %></th>
+      </tr>
+
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <div class="bulk-actions align-left">
+          </div>
+          <%= render "layouts/pagination" %>
+          <div class="clear"></div>
+        </td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <% @crimes.each do |crime| %>
+        <tr>
+          <%if can? :show, Crime %>
+            <td><%=link_to crime.id, crime, :class => 'button'%></td>
+          <%else%>
+            <td><%= label crime.id, crime.id, :class => 'button'%></td>
+          <%end%>
+
+
+          <% @model = crime %> 
+
+          <td><%= crime.description %></td>
+          <%= render "layouts/index_links" %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <%= render "layouts/action_links" %>
+</div> 
+<%= render "layouts/second_tab" %>

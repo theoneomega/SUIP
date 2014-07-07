@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  category_id: 1
+  operational_area: MyString
+  meeting_place: MyString
+  modus_operandi: MyText
+
+two:
+  name: MyString
+  category_id: 1
+  operational_area: MyString
+  meeting_place: MyString
+  modus_operandi: MyText

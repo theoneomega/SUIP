@@ -1,0 +1,24 @@
+<%= render "layouts/first_tab" %>
+<%= form_for(@crime) do |f| %>
+<% if @crime.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@crime.errors.count, "error") %> prohibited this crime from being saved:</h2>
+
+  <ul>
+    <% @crime.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <p class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description, :class=>"text-input small-input" %>
+  </p>
+
+<div class="form-actions">
+  <%= f.submit nil, :class => 'button' %>
+</div>
+
+<% end %>

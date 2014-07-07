@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  organization_id: 1
+  sex: MyString
+  alias: MyString
+  record: MyText
+  rank: MyString
+  heigh: MyString
+  complexion: MyString
+  weight: MyString
+  recidence: MyString
+  addictions: MyText
+  phone: MyString
+
+two:
+  name: MyString
+  organization_id: 1
+  sex: MyString
+  alias: MyString
+  record: MyText
+  rank: MyString
+  heigh: MyString
+  complexion: MyString
+  weight: MyString
+  recidence: MyString
+  addictions: MyText
+  phone: MyString

@@ -1,0 +1,107 @@
+<%= render "layouts/first_tab" %>
+
+<div class="CSSTableGenerator" >
+  <table >
+    <tr>
+      <td>
+        <b>Nombre</b> <%= @person.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Organización</b> <%= @person.organization.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Genero</b> <%= @person.sex %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Alias</b> <%= @person.alias %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Antecedentes</b> <%= @person.record %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Rango</b> <%= @person.rank %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Peso</b> <%= @person.heigh %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Complexión</b> <%= @person.complexion %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Altura</b> <%= @person.weight %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Dirección</b> <%= @person.recidence %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Adicciones</b> <%= @person.addictions %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Telefono</b> <%= @person.phone %>
+      </td>
+    </tr>
+      <tr>
+        <td>
+          <b>Licencia</b> <%= @person.drivers_licence %>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <b>Estado</b> <%= @person.state %>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <b>Ocupación</b> <%= @person.ocupation %>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <b>Forma de contacto</b> <%= @person.contacted_by %>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <b>Sicatrices / Marcas / Tatuajes</b> <%= @person.peculiarities %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Reportes en archivo</b> <%= @person.file_reports %>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <b>Observaciones</b> <%= @person.observations %>
+        </td>
+      </tr>
+    
+    
+    
+  </table>
+</div>
+<%= render "layouts/action_links" %>
+
+<br />

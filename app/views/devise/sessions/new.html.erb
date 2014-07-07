@@ -1,0 +1,26 @@
+<h2>Sign in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <p>
+    <%= f.label :username %>
+    <%= f.text_field :username, :class => "text-input" %>
+    </p>
+    <div class="clear"></div>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password,:class => "text-input" %>
+    </p>
+    <div class="clear"></div>
+    
+    <%#= f.input :email, required: false, autofocus: true %>
+    <%#= f.input :password, required: false %>
+    <%#= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Iniciar Sesión", :class => "button" %>
+  </div>
+<% end %>
+
+<%#= render "devise/shared/links" %>
