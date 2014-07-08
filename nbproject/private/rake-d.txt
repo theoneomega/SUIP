@@ -30,6 +30,7 @@ db\:schema\:dump=Create a db/schema.rb file that can be portably used against an
 db\:schema\:load=Load a schema.rb file into the database
 db\:schema\:load_if_ruby=
 db\:seed=Load the seed data from db/seeds.rb
+db\:seed\:dump=Dump records from the database into db/seeds.rb
 db\:sessions\:clear=
 db\:sessions\:create=
 db\:setup=Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the db first)

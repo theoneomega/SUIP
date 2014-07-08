@@ -6,7 +6,8 @@ gem 'rails', '3.2.18'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'nested_form'
+gem "awesome_nested_fields"
 
 group :development do
   gem "better_errors"
