@@ -8,6 +8,9 @@ gem 'rails', '3.2.18'
 gem 'sqlite3'
 gem 'nested_form'
 gem "awesome_nested_fields"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jvectormap-rails', '~> 1.0.0'
 
 group :development do
   gem "better_errors"

@@ -1,0 +1,12 @@
+<div class="tattoos">
+  <h3> Peculiaridades </h3>
+  <p class="field">
+    <%= f.label :tattoo %>
+    <%= f.file_field :tattoo, :class=>"text-input medium-input" %>
+    <%= f.hidden_field :tattoo_cache %>
+  </p>
+  <p class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, :class=>"text-input medium-input", :size => '30x10' %>
+  </p>
+</div>

@@ -1,0 +1,39 @@
+<%= render "layouts/first_tab" %>
+
+<div class="CSSTableGenerator" >
+  <table >
+          <tr>
+        <td>
+          <b><%= t'.brand' %></b> <%= @vehicle.brand %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.vehicle_year' %></b> <%= @vehicle.vehicle_year %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.plate' %></b> <%= @vehicle.plate %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.model' %></b> <%= @vehicle.model %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.color' %></b> <%= @vehicle.color %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.driver' %></b> <%= @vehicle.driver %>
+        </td>
+      </tr>
+      </table>
+</div>
+<%= render "layouts/action_links" %>
+
+<br />

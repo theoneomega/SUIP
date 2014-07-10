@@ -3,11 +3,11 @@
     <thead>
       <tr>
         <th><input class="check-all" type="checkbox" /></th>
-        <th>Nombre</th>
-        <th>Categoria</th>
-        <th>Area de operación</th>
-        <th>Lugar de reunión</th>
-        <th>Modus operandi</th>
+        <th>NOMBRE</th>
+        <th>CATEGORIA</th>
+        <th>AREA DE OPERACIÓN</th>
+        <th>LUGAR DE REUNIÓN</th>
+        <th>MODUS OPERANDI</th>
       </tr>
 
     </thead>
@@ -35,13 +35,13 @@
 
           <% @model = organization %> 
 
-          <td><%= organization.name %></td>
+          <td><%= organization.name.upcase if organization.name %></td>
 
-          <td><%= organization.category_id %></td>
+          <td><%= organization.category.name.upcase if organization.category %></td>
 
-          <td><%= organization.operational_area %></td>
+          <td><%= organization.operational_area.upcase if organization.operational_area %></td>
 
-          <td><%= organization.meeting_place %></td>
+          <td><%= organization.meeting_place.upcase if organization.meeting_place %></td>
 
           <td><%= organization.modus_operandi %></td>
           <%= render "layouts/index_links" %>

@@ -1,0 +1,33 @@
+<%= render "layouts/first_tab" %>
+<%= form_for @tattoo, :html => {:multipart => true} do |f| %>
+<% if @tattoo.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@tattoo.errors.count, "error") %> prohibited this tattoo from being saved:</h2>
+
+  <ul>
+    <% @tattoo.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<h3 style="text-align: center;"><%= t'general_info' %></h3><br/>
+  <p class="field">
+    <%= f.label :tattoo %>
+    <%= f.file_field :tattoo, :class=>"text-input small-input" %>
+    <%= f.hidden_field :tattoo_cache %>
+  </p>
+  <p class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :person_id %>
+    <%= f.number_field :person_id, :class=>"text-input small-input" %>
+  </p>
+
+<div class="form-actions">
+  <%= f.submit nil, :class => 'button' %>
+</div>
+
+<% end %>

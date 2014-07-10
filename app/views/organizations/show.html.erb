@@ -4,34 +4,34 @@
   <table >
     <tr>
       <td>
-        <b>Nombre:</b> <%= @organization.name %>
+        <b>Nombre:</b> <%= @organization.name.upcase if @organization.name %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Categoria:</b> <%= @organization.category.name %>
+        <b>Categoria:</b> <%= @organization.category.name.upcase if @organization.category %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Area de operación:</b> <%= @organization.operational_area %>
+        <b>Area de operación:</b> <%= @organization.operational_area.upcase if @organization.operational_area %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Lugar de reunión:</b> <%= @organization.meeting_place %>
+        <b>Lugar de reunión:</b> <%= @organization.meeting_place.upcase if @organization.meeting_place %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Modus operandi:</b> <%= @organization.modus_operandi %>
+        <b>Modus operandi:</b> <%= @organization.modus_operandi.upcase if @organization.modus_operandi %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Miembros conocidos:</b> 
+        <b>Miembros conocidos:</b>
         <% @organization.person.each do | person|%>
-          <%= link_to person.name, person %>
+          <%= link_to person.name.upcase, person %>
         <% end %>
       </td>
     </tr>

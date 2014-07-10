@@ -3,6 +3,7 @@ es:
   show_record: Mostrar registro
   edit_record: Editar registro
   welcome: Bienvenido
+  vehicles: Vehiculos
   sessions: Iniciar Sesion
   catalogs: Catalogos
   crimes: Delitos
@@ -11,6 +12,7 @@ es:
   required: Campos requeridos
   general_info: INFORMACION GENERAL
   home: Inicio
+  tattoos: Tatuajes
   roles: Roles
   people: Personas
   organizations: Organizaciones
@@ -33,6 +35,8 @@ es:
         crime: Delito
         person: Persona
         organization: Organización
+        tattoo: Tatuaje
+        vehicle: Vehiculo
     attributes:
         user:
           username: Nombre de usuario
@@ -43,7 +47,7 @@ es:
         person:
           name: Nombre
           birthday: Fecha de Nacimiento
-          peculiarities: Sicatrices / Marcas / Tatuajes
+          peculiarities: Cicatrices / Marcas / Tatuajes
           drivers_licence: Licencia
           state: Estado
           ocupation: Ocupación
@@ -67,6 +71,7 @@ es:
           member: Relación
         organization:
           name: Nombre
+          meeting_place_description: Descripción del lugar de reunión
           category_id: Categoria
           operational_area: Area de operación
           meeting_place: Lugar de reunión

@@ -1,0 +1,25 @@
+<%= render "layouts/first_tab" %>
+
+<div class="CSSTableGenerator" >
+  <table >
+      <tr>
+        <td>
+          <b><%= t'.person' %></b> <%= @tattoo.person_id %>
+        </td>
+      </tr> 
+          <tr>
+        <td>
+          <b><%= t'.tattoo' %></b> <%= image_tag @tattoo.tattoo if @tattoo.tattoo? %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.description' %></b> <%= @tattoo.description %>
+        </td>
+      </tr>
+        
+      </table>
+</div>
+<%= render "layouts/action_links" %>
+
+<br />

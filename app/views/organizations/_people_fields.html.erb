@@ -1,0 +1,90 @@
+<fieldset class="column-left">
+    <p class="field">
+      <%=  f.input :name, input_html: {:class => "text-input medium-input"}%>
+    </p>
+    <p class="field">
+      <%=  f.input :last_name, input_html: {:class => "text-input medium-input"}%>
+    </p>
+
+    <p class="field">
+      <%= f.input :last_name2, input_html:{class: "text-input medium-input"} %>
+      </p>
+
+      <p class="field">
+        <%= f.association :organization, input_html: {:class=>"text-input medium-input"} %>
+      </p>
+      <p class="field">
+        <%= f.collection_radio_buttons :member, [[true, 'Miembro'] ,[false, 'Asociado']], :first, :last, input_html: {class: "required"} %>
+        </p>
+        <p class="field">
+          <%= f.input :sex, collection: ["Hombre", "Mujer"], input_html: {class: "text-input medium-input"} %>
+          </p>
+          <p class="field">
+            <%= f.input :alias, input_html: {:class=>"text-input medium-input"} %>
+          </p>
+
+
+          <p class="field">
+            <%= f.label :rank %>
+            <%= f.text_field :rank, :class=>"text-input medium-input" %>
+          </p>
+          <p>
+            <%= f.input :peculiarities, :as => :boolean %>
+          </p>
+          <p>
+            <%= f.input :file_reports, input_html: {:class=>"text-input medium-input"} %>
+          </p>
+          
+          <p class="field">
+            <%= f.label :record %>
+            <%= f.text_area :record, :class=>"text-input medium-input" %>
+          </p>
+        </fieldset>
+        <fieldset class="column-right">
+
+          <p>
+            <%= f.label :birthday %>
+            <%= f.text_field :birthday, :id => "fecha" , :class => "text-input medium-input", readonly: true %>
+          </p>
+          <p>
+            <%= f.input :drivers_licence, input_html: {class: "text-input medium-input"} %>
+          </p>
+          <p>
+            <%= f.input :state, input_html: {:class => "text-input medium-input"} %>
+          </p>
+          
+          <p>
+            <%= f.input :ocupation, input_html: {:class => "text-input medium-input"} %>
+          </p>
+          <p>
+            <%= f.input :contacted_by, input_html: {:class => "text-input medium-input"} %>
+          </p>
+          
+          <p>
+            <%= f.input :heigh, :as => :decimal, input_html: {:class=> "text-input medium-input", :span =>" CM"} %>
+          </p>
+          <p class="field">
+            <%= f.label :complexion %>
+            <%= f.text_field :complexion, :class=>"text-input medium-input" %>
+          </p>
+          <p class="field">
+            <%= f.label :weight %>
+            <%= f.text_field :weight, :class=>"text-input medium-input" %>
+          </p>
+          <p class="field">
+            <%= f.label :recidence %>
+            <%= f.text_field :recidence, :class=>"text-input medium-input" %>
+          </p>
+          <p class="field">
+            <%= f.input :phone, :as => :tel, input_html:{ :class=>"text-input medium-input"} %>
+          </p>
+          <p class="field">
+            <%= f.label :addictions %>
+            <%= f.text_area :addictions, :class=>"text-input medium-input" %>
+          </p>
+
+        </fieldset>
+  
+  <p>
+    <%= f.input :observations, :as => :text, input_html:{ :class=>"text-input large-input", :size => "10x10"}  %>
+  </p>

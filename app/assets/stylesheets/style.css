@@ -801,7 +801,7 @@ div.wysiwyg iframe { border: 0; margin: 5px 0 0 0; clear: left; width: 97.5% !im
     color: #b00;
     position: relative;
     top: 7px;
-    left: 7px;
+    /*left: 7px;*/
 }
 
 .required.big {
@@ -813,4 +813,15 @@ div.wysiwyg iframe { border: 0; margin: 5px 0 0 0; clear: left; width: 97.5% !im
 }
 .radio{
     margin-right: 100px;
+}
+.tattoos{
+    -webkit-box-shadow: 5px 5px 8px 0px rgba(255, 21, 23, 0.27);
+    -moz-box-shadow:    5px 5px 8px 0px rgba(255, 21, 23, 0.27);
+    box-shadow:         5px 5px 8px 0px rgba(255, 21, 23, 0.27);
+    border-radius: 0px 18px 18px 18px;
+    -moz-border-radius: 0px 18px 18px 18px;
+    -webkit-border-radius: 0px 18px 18px 18px;
+    border: 2px solid #000000;
+    padding: 10px;
+    margin: 10px
 }

@@ -1,0 +1,55 @@
+<div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Marca</th>
+        <th>Año</th>
+        <th>Matricula</th>
+        <th>Modelo</th>
+        <th>Color</th>
+      </tr>
+
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <div class="bulk-actions align-left">
+          </div>
+          <%= render "layouts/pagination" %>
+          <div class="clear"></div>
+        </td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <% @vehicles.each do |vehicle| %>
+        <tr>
+          <%if can? :show, Vehicle %>
+            <td><%=link_to vehicle.id, vehicle, :class => 'button'%></td>
+          <%else%>
+            <td><%= label vehicle.id, vehicle.id, :class => 'button'%></td>
+          <%end%>
+
+
+          <% @model = vehicle %> 
+
+          <td><%= vehicle.brand %></td>
+
+          <td><%= vehicle.vehicle_year %></td>
+
+          <td><%= vehicle.plate %></td>
+
+          <td><%= vehicle.model %></td>
+
+          <td><%= vehicle.color %></td>
+
+          <%= render "layouts/index_links" %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <%= render "layouts/action_links" %>
+</div> 
+<%= render "layouts/second_tab" %>

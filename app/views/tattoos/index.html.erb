@@ -1,0 +1,48 @@
+<div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+  <table>
+    <thead>
+      <tr>
+        <th><%= t'.id' %></th>
+        <th><%= t'.tattoo' %></th>
+        <th><%= t'.description' %></th>
+        <th><%= t'.person' %></th>
+      </tr>
+
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <div class="bulk-actions align-left">
+          </div>
+          <%= render "layouts/pagination" %>
+          <div class="clear"></div>
+        </td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <% @tattoos.each do |tattoo| %>
+        <tr>
+          <%if can? :show, Tattoo %>
+            <td><%=link_to tattoo.id, tattoo, :class => 'button'%></td>
+          <%else%>
+            <td><%= label tattoo.id, tattoo.id, :class => 'button'%></td>
+          <%end%>
+
+
+          <% @model = tattoo %> 
+
+          <td><%= image_tag  tattoo.tattoo.url(:thumb) %></td>
+
+          <td><%= tattoo.description %></td>
+
+          <td><%= tattoo.person_id %></td>
+          <%= render "layouts/index_links" %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <%= render "layouts/action_links" %>
+</div> 
+<%= render "layouts/second_tab" %>

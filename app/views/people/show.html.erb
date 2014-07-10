@@ -4,102 +4,116 @@
   <table >
     <tr>
       <td>
-        <b>Nombre</b> <%= @person.name %>
+        <b>Nombre</b> <%= @person.name.upcase if @person.name %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Organización</b> <%= @person.organization.name %>
+        <b>Organización</b> <%= @person.organization.name if @person.organization %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Genero</b> <%= @person.sex %>
+        <b>Genero</b> <%= @person.sex.upcase if @person.sex %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Alias</b> <%= @person.alias %>
+        <b>Alias</b> <%= @person.alias.upcase if @person.alias %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Antecedentes</b> <%= @person.record %>
+        <b>Antecedentes</b> <%= @person.record.upcase if @person.record %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Rango</b> <%= @person.rank %>
+        <b>Rango</b> <%= @person.rank.upcase if @person.rank %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Peso</b> <%= @person.heigh %>
+        <b>Peso</b> <%= @person.heigh.upcase if @person.heigh %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Complexión</b> <%= @person.complexion %>
+        <b>Complexión</b> <%= @person.complexion.upcase if @person.complexion %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Altura</b> <%= @person.weight %>
+        <b>Altura</b> <%= @person.weight.upcase if @person.weight %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Dirección</b> <%= @person.recidence %>
+        <b>Dirección</b> <%= @person.recidence.upcase if @person.recidence %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Adicciones</b> <%= @person.addictions %>
+        <b>Adicciones</b> <%= @person.addictions.upcase if @person.addictions %>
       </td>
     </tr>
     <tr>
       <td>
-        <b>Telefono</b> <%= @person.phone %>
+        <b>Telefono</b> <%= @person.phone.upcase if @person.phone %>
       </td>
     </tr>
-      <tr>
-        <td>
-          <b>Licencia</b> <%= @person.drivers_licence %>
-        </td>
-      </tr>
-        <tr>
-        <td>
-          <b>Estado</b> <%= @person.state %>
-        </td>
-      </tr>
-        <tr>
-        <td>
-          <b>Ocupación</b> <%= @person.ocupation %>
-        </td>
-      </tr>
-        <tr>
-        <td>
-          <b>Forma de contacto</b> <%= @person.contacted_by %>
-        </td>
-      </tr>
-        <tr>
-        <td>
-          <b>Sicatrices / Marcas / Tatuajes</b> <%= @person.peculiarities %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <b>Reportes en archivo</b> <%= @person.file_reports %>
-        </td>
-      </tr>
-        <tr>
-        <td>
-          <b>Observaciones</b> <%= @person.observations %>
-        </td>
-      </tr>
-    
-    
-    
+    <tr>
+      <td>
+        <b>Licencia</b> <%= @person.drivers_licence.upcase if @person.drivers_licence %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Estado</b> <%= @person.state.upcase if @person.state %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Ocupación</b> <%= @person.ocupation.upcase if @person.ocupation %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Forma de contacto</b> <%= @person.contacted_by.upcase if @person.contacted_by %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Sicatrices / Marcas / Tatuajes</b> 
+        <% if  @person.peculiarities %>
+          SI
+        <% else %>
+          NO
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Reportes en archivo</b> <%= @person.file_reports.upcase if @person.file_reports %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>Observaciones</b> <%= @person.observations.upcase if @person.observations %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <b>Peculiaridades</b> <br />
+        <% @person.tattoos.each do |tattoo| %>
+          <%= image_tag tattoo.tattoo.url %>
+        <% end %>        
+      </td>
+    </tr>
+
+
+
   </table>
 </div>
 <%= render "layouts/action_links" %>

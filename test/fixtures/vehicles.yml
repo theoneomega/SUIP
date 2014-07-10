@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand: MyString
+  vehicle_year: 1
+  plate: MyString
+  model: MyString
+  color: MyString
+  driver: false
+
+two:
+  brand: MyString
+  vehicle_year: 1
+  plate: MyString
+  model: MyString
+  color: MyString
+  driver: false

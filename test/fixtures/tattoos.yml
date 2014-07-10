@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tattoo: MyString
+  description: MyText
+  person_id: 1
+
+two:
+  tattoo: MyString
+  description: MyText
+  person_id: 1

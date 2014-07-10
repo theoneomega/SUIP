@@ -2,12 +2,12 @@
   <table>
     <thead>
       <tr>
-        <th><input class="check-all" type="checkbox" /></th>
-        <th>Nombre</th>
-        <th>Organización</th>
-        <th>Genero</th>
-        <th>Alias</th>
-        <th>Rango</th>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>ORGANIZACIÓN</th>
+        <th>GENERO</th>
+        <th>ALIAS</th>
+        <th>RANGO</th>
       </tr>
 
     </thead>
@@ -35,15 +35,15 @@
 
           <% @model = person %> 
 
-          <td><%= person.name %></td>
+          <td><%= person.name.upcase if person.name %></td>
 
-          <td><%= person.organization.name %></td>
+          <td><%= person.organization.name.upcase if person.organization %></td>
 
-          <td><%= person.sex %></td>
+          <td><%= person.sex.upcase if person.sex %></td>
 
-          <td><%= person.alias %></td>
+          <td><%= person.alias.upcase if person.alias %></td>
 
-          <td><%= person.rank %></td>
+          <td><%= person.rank.upcase if person.rank %></td>
 
           <%= render "layouts/index_links" %>
         <% end %>

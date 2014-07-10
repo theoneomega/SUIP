@@ -1,10 +1,21 @@
 AntiGangs::Application.routes.draw do
-  resources :organizations
+  resources :vehicles
+
+
+  resources :tattoos
+
+
+  resources :organizations do 
+    collection do
+      get :add_people
+    end
+  end
+  
 
 
   resources :people
 
-
+  
   resources :crimes
 
 
