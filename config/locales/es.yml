@@ -38,6 +38,13 @@ es:
         tattoo: Tatuaje
         vehicle: Vehiculo
     attributes:
+        vehicle:
+          brand: Marca
+          vehicle_year: Año
+          plate: Matricula
+          model: Modelo
+          color: Color
+          driver: Conductor
         user:
           username: Nombre de usuario
           first_name: Nombre(s)
@@ -149,6 +156,7 @@ es:
       default: ! '%d/%m/%Y'
       long: ! '%A %d DE %B de %Y'
       short: ! '%d DE %B'
+      only_month: ! '%B'
       
     month_names:
     -

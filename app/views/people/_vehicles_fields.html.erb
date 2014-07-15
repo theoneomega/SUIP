@@ -1,0 +1,27 @@
+<div class="tattoos">
+  <h3> Vehiculos </h3> 
+<p class="field">
+    <%= f.label :brand %>
+    <%= f.text_field :brand, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :vehicle_year %>
+    <%= f.number_field :vehicle_year, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :plate %>
+    <%= f.text_field :plate, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :model %>
+    <%= f.text_field :model, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color, :class=>"text-input small-input" %>
+  </p>
+  <p class="field">
+    <%#= f.label :driver %>
+    <%= f.input :driver, :as => :boolean %>
+  </p>
+</div>

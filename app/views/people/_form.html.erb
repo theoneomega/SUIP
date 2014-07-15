@@ -107,6 +107,14 @@
               <%= f.text_area :addictions, :class=>"text-input medium-input" %>
             </p>
 
+            <%= f.link_to_add 'Agregar Vehiculo', :vehicles, :class => "button", :id => "peculiaridades_boton" %>
+            <p id="peculiaridades">
+              <%=f.fields_for :vehicles do |builder| %>
+                <%= render 'vehicles_fields', :f => builder %>
+              <%end%>
+            </p>
+
+
           </fieldset>
 
           <p>
