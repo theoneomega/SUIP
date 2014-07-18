@@ -18,7 +18,7 @@ class TattoosControllerTest < ActionController::TestCase
 
   test "should create tattoo" do
     assert_difference('Tattoo.count') do
-      post :create, tattoo: { description: @tattoo.description, person_id: @tattoo.person_id, tattoo: @tattoo.tattoo }
+      post :create, tattoo: { back: @tattoo.back, description: @tattoo.description, front: @tattoo.front, head: @tattoo.head, hip: @tattoo.hip, left_arm: @tattoo.left_arm, left_foot: @tattoo.left_foot, left_forearm: @tattoo.left_forearm, left_hand: @tattoo.left_hand, left_leg: @tattoo.left_leg, left_thigh: @tattoo.left_thigh, neck: @tattoo.neck, right_arm: @tattoo.right_arm, right_foot: @tattoo.right_foot, right_forearm: @tattoo.right_forearm, right_hand: @tattoo.right_hand, right_leg: @tattoo.right_leg, right_thigh: @tattoo.right_thigh, tattoo: @tattoo.tattoo, thorax: @tattoo.thorax }
     end
 
     assert_redirected_to tattoo_path(assigns(:tattoo))
@@ -35,7 +35,7 @@ class TattoosControllerTest < ActionController::TestCase
   end
 
   test "should update tattoo" do
-    put :update, id: @tattoo, tattoo: { description: @tattoo.description, person_id: @tattoo.person_id, tattoo: @tattoo.tattoo }
+    put :update, id: @tattoo, tattoo: { back: @tattoo.back, description: @tattoo.description, front: @tattoo.front, head: @tattoo.head, hip: @tattoo.hip, left_arm: @tattoo.left_arm, left_foot: @tattoo.left_foot, left_forearm: @tattoo.left_forearm, left_hand: @tattoo.left_hand, left_leg: @tattoo.left_leg, left_thigh: @tattoo.left_thigh, neck: @tattoo.neck, right_arm: @tattoo.right_arm, right_foot: @tattoo.right_foot, right_forearm: @tattoo.right_forearm, right_hand: @tattoo.right_hand, right_leg: @tattoo.right_leg, right_thigh: @tattoo.right_thigh, tattoo: @tattoo.tattoo, thorax: @tattoo.thorax }
     assert_redirected_to tattoo_path(assigns(:tattoo))
   end
 

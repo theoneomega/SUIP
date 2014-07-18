@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.18'
 
@@ -10,12 +10,14 @@ gem 'nested_form'
 gem "awesome_nested_fields"
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'jvectormap-rails', '~> 1.0.0'
+#gem 'jvectormap-rails', '~> 1.0.0'
+gem 'fancybox-rails'
 
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'brakeman', :require => false
+  
 end
 
 # Gems used only for assets and not required
@@ -34,15 +36,15 @@ gem 'jquery-rails'
 gem 'thin'
 gem 'devise'
 gem 'cancan'
-gem 'roles_ui', git: 'http://github.com/paupauorg/roles-ui.git'
+gem 'roles_ui', :git => 'http://github.com/paupauorg/roles-ui.git'
 gem "less-rails", '~>2.3.3' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS 
 gem 'therubyracer'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem 'i18n'
+#gem 'i18n'
 
 gem "i18n-missing_translations"
-gem 'i18n-tasks', '~> 0.1.0'#rake i18n:missing
+gem 'i18n-tasks', '~> 0.1.0'
 
 gem 'ruby-oci8', '= 2.1.6'
 gem 'activerecord-oracle_enhanced-adapter','~> 1.4.0'

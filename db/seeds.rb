@@ -1,4 +1,1 @@
-Category.create!([
-  {name: "PANDILLA", description: ""},
-  {name: "ORGANIZACIÓN CRIMINAL", description: ""}
-])
+User.create(username: "theoneomega", first_name: 'Joel', last_name: 'Melendez', last_name2: "Mata", phone: '6144581873',  email: 'theoneomega@gmail.com', password: 'Password1', password_confirmation: 'Password1')

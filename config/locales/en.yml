@@ -1,3 +1,145 @@
 ---
 en:
+  activerecord:
+    attributes:
+      category:
+        description: Descripción
+        name: Nombre
+      organization:
+        category_id: Categoria
+        meeting_place: Lugar de reunión
+        meeting_place_description: Descripción del lugar de reunión
+        modus_operandi: Modus operandi
+        name: Nombre
+        operational_area: Area de operación
+      person:
+        addictions: Adicciones
+        alias: Apodo
+        birthday: Fecha de Nacimiento
+        complexion: Complexión
+        contacted_by: Forma de contacto
+        drivers_licence: Licencia
+        file_reports: Reportes en archivo
+        heigh: Altura (cm)
+        last_name: Paterno
+        last_name2: Materno
+        member: Relación
+        name: Nombre
+        observations: Observaciones
+        ocupation: Ocupación
+        organization: Organización
+        organization_id: Organización
+        peculiarities: Cicatrices / Marcas / Tatuajes
+        phone: Telefono
+        rank: Rango
+        recidence: Domicilio
+        record: Antecedentes
+        sex: Sexo
+        state: Estado
+        weight: Peso (kg)
+      user:
+        first_name: Nombre(s)
+        last_name: Apellido Paterno
+        last_name2: Apellido Materno
+        phone_number: Telefono
+        username: Nombre de usuario
+      vehicle:
+        brand: Marca
+        color: Color
+        driver: Conductor
+        model: Modelo
+        plate: Matricula
+        vehicle_year: Año
+    models:
+      category: Categoria
+      crime: Delito
+      organization: Organización
+      person: Persona
+      role: Rol
+      tattoo: Tatuaje
+      user: Usuario
+      vehicle: Vehiculo
+  catalogs: Catalogos
+  categories: Categorias
+  crimes: Delitos
+  destroy: Eliminar
+  devise:
+    change_my_password: Cambiar mi contraseña
+    change_your_password: Cambia tu contraseña
+    confirm_my_account: Confirmar mi cuenta
+    failure:
+      already_authenticated: Usted ya esta conectado
+      user:
+        signed_in: Conectado
+        signed_out: Desconectado
+        unauthenticated: Es necesario iniciar sesión para continuar
+    forgot_your_password: ¿Olvidaste tu contraseña?
+    resend_confirmation_instructions: Reenviar instrucciones de confirmación
+    resend_unlock_instructions: Reenviar instrucciones de desbloqueo
+    send_me_reset_password_instructions: Enviar instrucciones de desbloqueo
+    sessions:
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+      user:
+        signed_in: Conectadoooo
+    you_can_confirm_your_account_email: 'Puedes confirmar tu correo electrónico a
+      través de este link: '
+  edit_record: Editar registro
+  errors:
+    messages:
+      blank: no puede ser un campo vacío.
+      invalid: campo inválido.
+      invalid_attachment_content_type: ' inválido, elija un archivo diferente con
+        la extension correspondiente.'
+      invalid_attachment_size: ' sobrepasa el límite de tamaño permitido, elija un
+        archivo diferente.'
+      invalid_datetime: campo de fecha y hora inválido.
+      not_a_number: no es un valor numérico.
+      not_less_than_end_date: no es menor que la final.
+      overlaps: las fechas se empalman con otras ya existentes.
+      taken: registro ya existente.
+      too_long: valor demasiado largo.
+      too_short: valor demasiado corto.
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: '1 error evitó que este elemento (%{model}) fuera registrado:'
+        other: '%{count} errores evitaron que este elemento (%{model}) fuera registrado:'
+  general_info: INFORMACION GENERAL
   hello: Hello world
+  helpers:
+    submit:
+      create: Crear %{model}
+      update: Actualizar %{model}
+  home: Inicio
+  logout: Desconectar
+  new_record_female: Nueva %{record}
+  new_record_male: Nuevo %{record}
+  organizations: Organizaciones
+  people: Personas
+  required: Campos requeridos
+  return_to_index: Regresar a %{model}
+  roles: Roles
+  sessions: Iniciar Sesion
+  show_record: Mostrar registro
+  signed_in: Conectado
+  tattoos: Tatuajes
+  users: Usuarios
+  vehicles: Vehiculos
+  welcome: Bienvenido
+  will_paginate:
+    next_label: Siguientes &#8594;
+    page_entries_info:
+      multi_page: Mostrando %{from} - %{to} de %{count} en total
+      multi_page_html: Mostrando <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b> %{count}</b>
+        en total
+      single_page:
+        one: Mostrando 1 %{model}
+        other: Mostrando todos (%{count})
+        zero: Ninguno encontrado
+      single_page_html:
+        one: Mostrando <b>1</b> %{model}
+        other: Mostrando todos <b>(%{count})</b>
+        zero: Ninguno encontrado
+    page_gap: '&hellip;'
+    previous_label: '&#8592; Anteriores'

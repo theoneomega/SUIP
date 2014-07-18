@@ -1,8 +1,8 @@
 AntiGangs::Application.routes.draw do
-  resources :vehicles
-
-
   resources :tattoos
+
+
+  resources :vehicles
 
 
   resources :organizations do 

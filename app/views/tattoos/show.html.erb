@@ -2,14 +2,9 @@
 
 <div class="CSSTableGenerator" >
   <table >
-      <tr>
-        <td>
-          <b><%= t'.person' %></b> <%= @tattoo.person_id %>
-        </td>
-      </tr> 
           <tr>
         <td>
-          <b><%= t'.tattoo' %></b> <%= image_tag @tattoo.tattoo if @tattoo.tattoo? %>
+          <b><%= t'.tattoo' %></b> <%= @tattoo.tattoo %>
         </td>
       </tr>
           <tr>
@@ -17,7 +12,96 @@
           <b><%= t'.description' %></b> <%= @tattoo.description %>
         </td>
       </tr>
-        
+          <tr>
+        <td>
+          <b><%= t'.head' %></b> <%= @tattoo.head %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.neck' %></b> <%= @tattoo.neck %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.thorax' %></b> <%= @tattoo.thorax %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.left_arm' %></b> <%= @tattoo.left_arm %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.right_arm' %></b> <%= @tattoo.right_arm %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.left_forearm' %></b> <%= @tattoo.left_forearm %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.right_forearm' %></b> <%= @tattoo.right_forearm %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.left_hand' %></b> <%= @tattoo.left_hand %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.right_hand' %></b> <%= @tattoo.right_hand %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.hip' %></b> <%= @tattoo.hip %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.left_thigh' %></b> <%= @tattoo.left_thigh %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.right_thigh' %></b> <%= @tattoo.right_thigh %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.left_leg' %></b> <%= @tattoo.left_leg %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.right_leg' %></b> <%= @tattoo.right_leg %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.left_foot' %></b> <%= @tattoo.left_foot %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.right_foot' %></b> <%= @tattoo.right_foot %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.front' %></b> <%= @tattoo.front %>
+        </td>
+      </tr>
+          <tr>
+        <td>
+          <b><%= t'.back' %></b> <%= @tattoo.back %>
+        </td>
+      </tr>
       </table>
 </div>
 <%= render "layouts/action_links" %>

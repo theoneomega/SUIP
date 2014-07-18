@@ -6,12 +6,14 @@
             <file>file:/home/desarrollo/projects/SUIP/app/views/people/_form.html.erb</file>
             <file>file:/home/desarrollo/projects/SUIP/app/assets/stylesheets/style.css</file>
             <file>file:/home/desarrollo/projects/SUIP/app/views/tattoos/index.html.erb</file>
-            <file>file:/home/desarrollo/projects/SUIP/app/uploaders/tattoo_uploader.rb</file>
+            <file>file:/home/desarrollo/projects/SUIP/app/assets/javascripts/tattoos.js.coffee</file>
             <file>file:/home/desarrollo/projects/SUIP/app/models/person.rb</file>
             <file>file:/home/desarrollo/projects/SUIP/app/views/people/_tattoos_fields.html.erb</file>
+            <file>file:/home/desarrollo/projects/SUIP/app/assets/javascripts/application.js</file>
             <file>file:/home/desarrollo/projects/SUIP/app/views/people/show.html.erb</file>
             <file>file:/home/desarrollo/projects/SUIP/app/models/tattoo.rb</file>
             <file>file:/home/desarrollo/projects/SUIP/Gemfile</file>
+            <file>file:/home/desarrollo/projects/SUIP/app/assets/stylesheets/application.css</file>
             <file>file:/home/desarrollo/projects/SUIP/app/views/tattoos/show.html.erb</file>
         </group>
     </open-files>

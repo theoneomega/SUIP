@@ -3,9 +3,43 @@
 one:
   tattoo: MyString
   description: MyText
-  person_id: 1
+  head: false
+  neck: false
+  thorax: false
+  left_arm: false
+  right_arm: false
+  left_forearm: false
+  right_forearm: false
+  left_hand: false
+  right_hand: false
+  hip: false
+  left_thigh: false
+  right_thigh: false
+  left_leg: false
+  right_leg: false
+  left_foot: false
+  right_foot: false
+  front: false
+  back: false
 
 two:
   tattoo: MyString
   description: MyText
-  person_id: 1
+  head: false
+  neck: false
+  thorax: false
+  left_arm: false
+  right_arm: false
+  left_forearm: false
+  right_forearm: false
+  left_hand: false
+  right_hand: false
+  hip: false
+  left_thigh: false
+  right_thigh: false
+  left_leg: false
+  right_leg: false
+  left_foot: false
+  right_foot: false
+  front: false
+  back: false

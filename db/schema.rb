@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140710162139) do
+ActiveRecord::Schema.define(:version => 20140718164754) do
 
   create_table "assignments", :force => true do |t|
     t.integer "user_id",   :precision => 38, :scale => 0
@@ -109,9 +109,26 @@ ActiveRecord::Schema.define(:version => 20140710162139) do
   create_table "tattoos", :force => true do |t|
     t.string   "tattoo"
     t.text     "description"
-    t.integer  "person_id",   :precision => 38, :scale => 0
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.boolean  "head",          :precision => 1, :scale => 0
+    t.boolean  "neck",          :precision => 1, :scale => 0
+    t.boolean  "thorax",        :precision => 1, :scale => 0
+    t.boolean  "left_arm",      :precision => 1, :scale => 0
+    t.boolean  "right_arm",     :precision => 1, :scale => 0
+    t.boolean  "left_forearm",  :precision => 1, :scale => 0
+    t.boolean  "right_forearm", :precision => 1, :scale => 0
+    t.boolean  "left_hand",     :precision => 1, :scale => 0
+    t.boolean  "right_hand",    :precision => 1, :scale => 0
+    t.boolean  "hip",           :precision => 1, :scale => 0
+    t.boolean  "left_thigh",    :precision => 1, :scale => 0
+    t.boolean  "right_thigh",   :precision => 1, :scale => 0
+    t.boolean  "left_leg",      :precision => 1, :scale => 0
+    t.boolean  "right_leg",     :precision => 1, :scale => 0
+    t.boolean  "left_foot",     :precision => 1, :scale => 0
+    t.boolean  "right_foot",    :precision => 1, :scale => 0
+    t.boolean  "front",         :precision => 1, :scale => 0
+    t.boolean  "back",          :precision => 1, :scale => 0
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
   end
 
   create_table "users", :force => true do |t|
