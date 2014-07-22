@@ -16,6 +16,56 @@ class TattoosController < ApplicationController
   # GET /tattoos/1.json
   def show
     @tattoo = Tattoo.find(params[:id])
+  
+    @mostrar= ""
+    if @tattoo.head
+      @mostrar += "cabeza,"
+    end
+    if @tattoo.neck
+      @mostrar += "cuello,"
+    end
+    if @tattoo.thorax
+      @mostrar+="torax,"
+    end
+    if @tattoo.hip
+      @mostrar+="cadera,"
+    end
+    if @tattoo.left_arm
+      @mostrar+="brazo_izquierdo,"
+    end
+    if @tattoo.left_forearm
+      @mostrar+="antebrazo_izquierdo,"
+    end
+    if @tattoo.left_hand
+      @mostrar+="mano_izquierda,"
+    end
+    if @tattoo.left_thigh
+      @mostrar+="muslo_izquierdo,"
+    end
+    if @tattoo.left_foot
+      @mostrar+="pie_izquierdo,"
+    end
+    if @tattoo.left_leg
+      @mostrar+="pierna_izquierda,"
+    end
+    if @tattoo.right_arm
+      @mostrar+="brazo_derecho,"
+    end
+    if @tattoo.right_forearm
+      @mostrar+="antebrazo_derecho,"
+    end
+    if @tattoo.right_hand
+      @mostrar+="mano_derecha,"
+    end
+    if @tattoo.right_thigh
+      @mostrar+="muslo_derecho,"
+    end
+    if @tattoo.right_foot
+      @mostrar+="pie_derecho,"
+    end
+    if @tattoo.right_leg
+      @mostrar+="pierna_derecha,"
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -37,6 +87,55 @@ class TattoosController < ApplicationController
   # GET /tattoos/1/edit
   def edit
     @tattoo = Tattoo.find(params[:id])
+    @mostrar= ""
+    if @tattoo.head
+      @mostrar += "cabeza,"
+    end
+    if @tattoo.neck
+      @mostrar += "cuello,"
+    end
+    if @tattoo.thorax
+      @mostrar+="torax,"
+    end
+    if @tattoo.hip
+      @mostrar+="cadera,"
+    end
+    if @tattoo.left_arm
+      @mostrar+="brazo_izquierdo,"
+    end
+    if @tattoo.left_forearm
+      @mostrar+="antebrazo_izquierdo,"
+    end
+    if @tattoo.left_hand
+      @mostrar+="mano_izquierda,"
+    end
+    if @tattoo.left_thigh
+      @mostrar+="muslo_izquierdo,"
+    end
+    if @tattoo.left_foot
+      @mostrar+="pie_izquierdo,"
+    end
+    if @tattoo.left_leg
+      @mostrar+="pierna_izquierda,"
+    end
+    if @tattoo.right_arm
+      @mostrar+="brazo_derecho,"
+    end
+    if @tattoo.right_forearm
+      @mostrar+="antebrazo_derecho,"
+    end
+    if @tattoo.right_hand
+      @mostrar+="mano_derecha,"
+    end
+    if @tattoo.right_thigh
+      @mostrar+="muslo_derecho,"
+    end
+    if @tattoo.right_foot
+      @mostrar+="pie_derecho,"
+    end
+    if @tattoo.right_leg
+      @mostrar+="pierna_derecha,"
+    end
   end
 
   # POST /tattoos

@@ -13,7 +13,8 @@ class TattooUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "tatuajes/#{I18n.l model.created_at, :format => '%B'}/#{model.person.name.to_s.underscore} #{model.person.id}"
+#    "tatuajes/#{I18n.l model.created_at, :format => '%B'}/#{model.person.name.to_s.underscore} #{model.person.id}"
+    "tatuajes/#{I18n.l model.created_at, :format => '%B'}"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -34,6 +35,9 @@ class TattooUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
    version :thumb do
      process :resize_to_fill => [50, 50]
+   end
+   version :mini do
+     process :resize_to_fill => [100, 100]
    end
 
   # Add a white list of extensions which are allowed to be uploaded.

@@ -4,27 +4,10 @@
       <tr>
         <th><input class="check-all" type="checkbox" /></th>
         <th><%= t'.id' %></th>
-                  <th><%= t'.tattoo' %></th>
-                  <th><%= t'.description' %></th>
-                  <th><%= t'.head' %></th>
-                  <th><%= t'.neck' %></th>
-                  <th><%= t'.thorax' %></th>
-                  <th><%= t'.left_arm' %></th>
-                  <th><%= t'.right_arm' %></th>
-                  <th><%= t'.left_forearm' %></th>
-                  <th><%= t'.right_forearm' %></th>
-                  <th><%= t'.left_hand' %></th>
-                  <th><%= t'.right_hand' %></th>
-                  <th><%= t'.hip' %></th>
-                  <th><%= t'.left_thigh' %></th>
-                  <th><%= t'.right_thigh' %></th>
-                  <th><%= t'.left_leg' %></th>
-                  <th><%= t'.right_leg' %></th>
-                  <th><%= t'.left_foot' %></th>
-                  <th><%= t'.right_foot' %></th>
-                  <th><%= t'.front' %></th>
-                  <th><%= t'.back' %></th>
-              </tr>
+        <th><%= t'.tattoo' %></th>
+        <th><%= t'.description' %></th>
+        
+      </tr>
 
     </thead>
 
@@ -41,56 +24,22 @@
 
     <tbody>
       <% @tattoos.each do |tattoo| %>
-      <tr>
-        <%if can? :show, Tattoo %>
-        <td><%=link_to tattoo.id, tattoo, :class => 'button'%></td>
-        <%else%>
-        <td><%= label tattoo.id, tattoo.id, :class => 'button'%></td>
-        <%end%>
-        
-                  
-            <% @model = tattoo %> 
-                    
-          <td><%= tattoo.tattoo %></td>
-                            
+        <tr>
+          <%if can? :show, Tattoo %>
+            <td><%=link_to tattoo.id, tattoo, :class => 'button'%></td>
+          <%else%>
+            <td><%= label tattoo.id, tattoo.id, :class => 'button'%></td>
+          <%end%>
+
+
+          <% @model = tattoo %> 
+
+          <td><%= link_to (image_tag tattoo.tattoo_url(:thumb)),tattoo %></td>
+
           <td><%= tattoo.description %></td>
-                            
-          <td><%= tattoo.head %></td>
-                            
-          <td><%= tattoo.neck %></td>
-                            
-          <td><%= tattoo.thorax %></td>
-                            
-          <td><%= tattoo.left_arm %></td>
-                            
-          <td><%= tattoo.right_arm %></td>
-                            
-          <td><%= tattoo.left_forearm %></td>
-                            
-          <td><%= tattoo.right_forearm %></td>
-                            
-          <td><%= tattoo.left_hand %></td>
-                            
-          <td><%= tattoo.right_hand %></td>
-                            
-          <td><%= tattoo.hip %></td>
-                            
-          <td><%= tattoo.left_thigh %></td>
-                            
-          <td><%= tattoo.right_thigh %></td>
-                            
-          <td><%= tattoo.left_leg %></td>
-                            
-          <td><%= tattoo.right_leg %></td>
-                            
-          <td><%= tattoo.left_foot %></td>
-                            
-          <td><%= tattoo.right_foot %></td>
-                            
-          <td><%= tattoo.front %></td>
-                            
-          <td><%= tattoo.back %></td>
-                <%= render "layouts/index_links" %>
+
+        
+          <%= render "layouts/index_links" %>
         <% end %>
       </tr>
     </tbody>

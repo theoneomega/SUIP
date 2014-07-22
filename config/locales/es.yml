@@ -7,7 +7,7 @@ es:
         neck: Cuello
         thorax: Torax
         left_arm: Brazo Izquierdo
-        rith_arm: Brazo Derecho
+        right_arm: Brazo Derecho
         left_forearm: Antebrazo Izquierdo
         right_forearm: Antebrazo Derecho
         left_hand: Mano Izquierda
