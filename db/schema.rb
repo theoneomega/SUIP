@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140721174751) do
+ActiveRecord::Schema.define(:version => 20140723190954) do
 
   create_table "assignments", :force => true do |t|
     t.integer "user_id",   :precision => 38, :scale => 0
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20140721174751) do
   end
 
   add_index "assignments", ["user_id", "user_type"], :name => "i_ass_use_id_use_typ"
+
+  create_table "bodies", :force => true do |t|
+    t.string   "image"
+    t.text     "code"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
