@@ -3,7 +3,7 @@ class TattoosController < ApplicationController
   load_and_authorize_resource
 
   def index
-
+    @people = Person.order('id DESC').paginate(:per_page => 10, :page => params[:page])
     @tattoos = Tattoo.order('id DESC').paginate(:per_page => 10, :page => params[:page])
     respond_to do |format|
       format.html # index.html.erb
