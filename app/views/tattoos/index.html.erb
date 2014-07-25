@@ -30,10 +30,10 @@
           <% @people.each do |person|%>
             <%person.tattoos.each do |tattoo|%>
               <li data-pile="<%= tattoo.person.name %>">
-                <a href="<%= tattoo.tattoo_url %>">
-                  <span class="tp-info"><span> <%=tattoo.description %></span></span>
+                <%= link_to(tattoo) do %>
+                 <span class="tp-info"><span> <%=tattoo.description %></span></span>
                   <img src="<%=tattoo.tattoo_url(:mini) %>" />
-                </a>
+                <% end %>
               </li>
             <% end %>
           <% end %>

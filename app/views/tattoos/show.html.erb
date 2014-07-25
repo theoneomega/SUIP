@@ -31,46 +31,90 @@
     <script language="javascript" src="/assets/jquery.imagemapster.js"></script>
     <%= flash[:notice]= @keys %>
     <script>
-              var windowObjectReference;
-              function openRequestedPopup() {
-              windowObjectReference = window.open(
-                      "<%= @tattoo.tattoo_url %> ", "_blank", "width=600", "height=100",
-                      "titlebar=no", "toolbar=no", "scrollbars=no", "location=no", "resizable=no", "directories=no",
-                      "copyhistory=no", "menubar=no");
-              }
 
-
-      var areas = "<%=@mostrar%>";
-<% if @tattoo.head %>
-        var cabeza = "cabeza";
-<% end %>
       $(document).ready(function()
       {
-      var initial_state = {
-      singleSelect: false,
-              render_highlight: {altImage: '/assets/body/body_verde.png'},
-              mapKey: 'tattoo',
-              fill: true, altImage: '/assets/body/body_rojo.png',
-              fillOpacity: 1,
-              stroke: true,
-              strokeColor: '000000',
-              strokeWidth: 2,
-              showToolTip: true,
-              toolTipClose: ["tooltip-click", "area-click"],
-              areas: [{
-<% if @tattoo.head %>
-                key: cabeza,
-                        toolTip: "Cabezaaaa"
-<% end %>
-<% if @tattoo.right_hand %>
-                key: "mano_derecha",
-                        toolTip: 'mano <img src="<%=@tattoo.tattoo_url%>" > '
-<% end %>
+        a = "";
+        var initial_state = {
+          singleSelect: false,
+          render_highlight: {altImage: '/assets/body/body_verde.png'},
+          mapKey: 'tattoo',
+          fill: true, altImage: '/assets/body/body_rojo.png',
+          fillOpacity: 1,
+          stroke: true,
+          strokeColor: '000000',
+          strokeWidth: 2,
+          showToolTip: true,
+          toolTipClose: ["tooltip-click", "area-click"],
+          areas: [{
+              key: "cabeza",
+              toolTip: '<%= @tattoo.head ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.head %>
+            },
+            {
+              key: "torax",
+              toolTip: '<%= @tattoo.thorax ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.thorax %>
+            },
+            {
+              key: "brazo_derecho",
+              toolTip: '<%= @tattoo.right_arm ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.right_arm %>
+            },
+            {
+              key: "brazo_izquierdo",
+              toolTip: '<%= @tattoo.left_arm ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.left_arm %>
+            },
+            {
+              key: "antebrazo_derecho",
+              toolTip: '<%= @tattoo.right_forearm ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.right_forearm %>
+            },
+            {
+              key: "antebrazo_izquierdo",
+              toolTip: '<%= @tattoo.left_forearm ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.left_forearm %>
+            },
+            {
+              key: "cadera",
+              toolTip: '<%= @tattoo.hip ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.hip %>
+            },
+            {
+              key: "muslo_derecho",
+              toolTip: '<%= @tattoo.right_thigh ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.right_thigh %>
+            },
+            {
+              key: "muslo_izquierdo",
+              toolTip: '<%= @tattoo.left_thigh ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.left_thigh %>
+            },
+            {
+              key: "pierna_derecha",
+              toolTip: '<%= @tattoo.right_leg ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.right_leg %>
+            },
+            {
+              key: "pierna_izquierda",
+              toolTip: '<%= @tattoo.left_leg ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.left_leg %>
+            },
+            {
+              key: "pie_derecho",
+              toolTip: '<%= @tattoo.right_foot ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.right_foot %>
+            },
+            {
+              key: "pie_izquierdo",
+              toolTip: '<%= @tattoo.left_foot ?  image_tag(@tattoo.tattoo_url) : ""%>',
+              selected: <%= @tattoo.left_foot %>
+            }
+            ]
 
-              }]
-
-      };
-              $('#shape1').mapster(initial_state).mapster('set', true, '<%=@mostrar%>').mapster('snapshot');
+        };
+        $('#shape1').mapster(initial_state).mapster('snapshot').mapster('unbind',true);
       });
     </script>
 

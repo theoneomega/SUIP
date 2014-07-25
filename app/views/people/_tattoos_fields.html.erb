@@ -4,7 +4,10 @@
     <%= f.file_field :tattoo, :class=>"text-input large-input", :onchange => 'renderImage(this);'%>
   </p>
 
-  <div id="body_image"></div>
+  <div id="body_image">
+   <% flash[:error]=  params[:child_index]%>
+    
+  </div>
   <div id="body_map"></div>
 
   <table> 
@@ -75,6 +78,8 @@
       new_body_id = document.getElementById("body_image").id = "body_image_" + area_id;
       new_map_id = document.getElementById("body_map").id = "body_map_" + area_id;
       hidden_div = document.getElementById("hidden").id = "hidden_" + area_id;
+      $(".removable").remove();
+      
       $("#" + new_body_id).prepend('<img style="width: 300px;" id="shape1_' + area_id +
               '" src="/assets/body/body.png" usemap="#shape1_' + area_id + '">');
       $("#" + new_map_id).prepend('<map name="shape1_' + area_id + '">' +
@@ -103,9 +108,9 @@
         fillOpacity: 1,
         stroke: true,
         strokeColor: '000000',
-        strokeWidth: 1
+        strokeWidth: 1       
       });
-      $('#' + hidden_div).fadeOut(0);
+      //  $('#' + hidden_div).fadeOut(0);
 
     }
     function check_head() {
